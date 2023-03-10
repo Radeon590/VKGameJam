@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Food : ScriptableObject
+public class Food : Item
 {
-    public string Namespace;
-    public Sprite RecipeIcon;
-    public Sprite Sprite;
+    
 }
