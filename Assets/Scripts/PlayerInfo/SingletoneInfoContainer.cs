@@ -17,12 +17,16 @@ public class SingletoneInfoContainer : MonoBehaviour, IinfoContainer
 
     public static MoneyInfo MoneyInfo;
 
+    public static RatingInfo RatingInfo;
+
     public void LoadInfo()
     {
-        Storage= new StorageInfo();
+        Storage = new StorageInfo();
         Storage.LoadInfo();
         MoneyInfo = new MoneyInfo();
         MoneyInfo.LoadInfo();
+        RatingInfo = new RatingInfo();
+        RatingInfo.LoadInfo();
         s_mealComponents = mealComponents;
     }
 }
