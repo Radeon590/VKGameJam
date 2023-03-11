@@ -2,24 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainTab : MonoBehaviour
+public class MainTab : Tab
 {
-    [SerializeField] private GameObject mainScreen;
-    [SerializeField] private GameObject marketScreen;
-    [SerializeField] private GameObject bankScreen;
-
-    public void OpenTab()
-    {
-        gameObject.SetActive(true);
-    }
-
-    public void CloseTab()
-    {
-        gameObject.SetActive(false);
-    }
+    [SerializeField] private FoodMarketTab marketTab;
+    [SerializeField] private BankTab bankTab;
 
     public void OpenMarket()
     {
+        marketTab.OpenTab();
+    }
 
+    public void OpenBank()
+    {
+        bankTab.OpenTab();
     }
 }

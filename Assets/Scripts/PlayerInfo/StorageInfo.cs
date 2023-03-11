@@ -2,12 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StorageInfo: IinfoBlock
+public struct StorageInfo: IinfoContainer
 {
-    public List<MealComponent> ComponentsInStorage = new List<MealComponent>();
+    public List<MealComponent> ComponentsInStorage;
+    public List<int> ComponentsInStorageNumbers;
+
+    public void AddMealComponents(List<Item> items, List<int> numbers)
+    {
+        for(int i = 0; i < items.Count; i++)
+        {
+            if (ComponentsInStorage.Contains(items[i] as MealComponent))
+            {
+                ComponentsInStorageNumbers[ComponentsInStorage.IndexOf(items[i] as MealComponent)] += numbers[i];
+            }
+            else
+            {
+                ComponentsInStorage.Add(items[i] as MealComponent);
+                ComponentsInStorageNumbers.Add(numbers[i]);
+            }
+        }
+    }
 
     public void LoadInfo()
     {
-
+        ComponentsInStorage = new List<MealComponent>();
     }
 }

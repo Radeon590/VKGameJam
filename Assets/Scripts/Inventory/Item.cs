@@ -8,4 +8,6 @@ public class Item : ScriptableObject
     public string Namespace;
     public Sprite Sprite;
     public Sprite Icon;
+    public int Price;
+    public int MaxNumber;
 }
