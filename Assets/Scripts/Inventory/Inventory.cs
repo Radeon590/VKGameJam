@@ -33,11 +33,11 @@ public class Inventory : MonoBehaviour
         ItemInHand = null;
     }
 
-    [SerializeField] private Item testItem;
+    /*[SerializeField] private Item testItem;
 
     private void Start()
     {
         ItemInHand = testItem;
         DropItem();
-    }
+    }*/
 }
