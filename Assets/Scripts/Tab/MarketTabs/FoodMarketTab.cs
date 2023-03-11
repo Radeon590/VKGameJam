@@ -80,11 +80,16 @@ public class FoodMarketTab : Tab
         
         if (SingletoneInfoContainer.MoneyInfo.Money >= _currentPrice)
         {
-            SingletoneInfoContainer.MoneyInfo.ChangeMoney(-_currentPrice);
+            SingletoneInfoContainer.MoneyInfo.Money -= _currentPrice;
             SingletoneInfoContainer.Storage.AddMealComponents(_itemsForPurchasinng, _numbersOfItemsForPurchasing);
         }
         else
             NotEnoughMoney();
+    }
+
+    public void Back()
+    {
+
     }
 
     private void NotEnoughMoney()

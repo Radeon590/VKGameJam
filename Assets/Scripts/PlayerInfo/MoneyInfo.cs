@@ -5,12 +5,6 @@ using UnityEngine;
 public struct MoneyInfo : IinfoContainer
 {
     public int Money;
-
-    public void ChangeMoney(int difference)
-    {
-        Money += difference;
-    }
-
     public int Debt;
 
     public void LoadInfo()

@@ -13,26 +13,16 @@ public class SingletoneInfoContainer : MonoBehaviour, IinfoContainer
         get { return s_mealComponents; }
     }
 
-    private static StorageInfo s_storage;
+    public static StorageInfo Storage;
 
-    public static StorageInfo Storage
-    {
-        get { return s_storage; }
-    }
-
-    private static MoneyInfo s_moneyInfo;
-
-    public static MoneyInfo MoneyInfo
-    {
-        get { return s_moneyInfo; }
-    }
+    public static MoneyInfo MoneyInfo;
 
     public void LoadInfo()
     {
-        s_storage = new StorageInfo();
-        s_storage.LoadInfo();
-        s_moneyInfo= new MoneyInfo();
-        s_moneyInfo.LoadInfo();
+        Storage= new StorageInfo();
+        Storage.LoadInfo();
+        MoneyInfo = new MoneyInfo();
+        MoneyInfo.LoadInfo();
         s_mealComponents = mealComponents;
     }
 }
