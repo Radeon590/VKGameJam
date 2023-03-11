@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 671cfcd3607a8d542a95414c9ce8d51a
+guid: 0333cdfea482f27448bc0b43486e69d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,7 +129,8 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: roadTile_0
+      name: "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439
+        \u0442\u0430\u0439\u043B\u043C\u0430\u043F _0"
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +144,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 545dc9fa1ca28c64ab0821cd5adbfe9d
-      internalID: -53975657
+      spriteID: eb765f272f785794591001419292ba50
+      internalID: -1217992652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadTile_1
+      name: "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439
+        \u0442\u0430\u0439\u043B\u043C\u0430\u043F _1"
       rect:
         serializedVersion: 2
         x: 128
@@ -164,14 +166,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3d8e8cf8cd0dc74f8bf5a86668e2f6b
-      internalID: 1022405654
+      spriteID: 01fe3c24a177a8a4794a74742249acb4
+      internalID: 858706803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadTile_2
+      name: "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439
+        \u0442\u0430\u0439\u043B\u043C\u0430\u043F _2"
       rect:
         serializedVersion: 2
         x: 256
@@ -185,14 +188,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c91f2b88225e4247a851c926258d047
-      internalID: -642665559
+      spriteID: 3dd5797e672d2ee49930d1af1f3ed21e
+      internalID: -1451308875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadTile_3
+      name: "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439
+        \u0442\u0430\u0439\u043B\u043C\u0430\u043F _3"
       rect:
         serializedVersion: 2
         x: 0
@@ -206,14 +210,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed8c5bbc5e376d641b4c14896a0ea3f3
-      internalID: -2075098792
+      spriteID: 7a1e40d8518104e4c98f06b660a4bf8a
+      internalID: 1641922564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadTile_4
+      name: "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439
+        \u0442\u0430\u0439\u043B\u043C\u0430\u043F _4"
       rect:
         serializedVersion: 2
         x: 128
@@ -227,14 +232,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 653bed9a91324734bb28d416e1581b05
-      internalID: 1003043390
+      spriteID: 76c7a7006e8683444b480d77b75b2855
+      internalID: 176833746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadTile_5
+      name: "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439
+        \u0442\u0430\u0439\u043B\u043C\u0430\u043F _5"
       rect:
         serializedVersion: 2
         x: 256
@@ -248,14 +254,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d4706c6444f8db489a59b17b1d6de68
-      internalID: 1892079780
+      spriteID: 989e889d5b2b00b4c8bc3f3241682a86
+      internalID: -174925112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadTile_6
+      name: "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439
+        \u0442\u0430\u0439\u043B\u043C\u0430\u043F _6"
       rect:
         serializedVersion: 2
         x: 0
@@ -269,14 +276,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e0281fa314908c409826137229e102d
-      internalID: -1964801382
+      spriteID: 5be16df36c968bc4480e3a26455f113f
+      internalID: -398677225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadTile_7
+      name: "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439
+        \u0442\u0430\u0439\u043B\u043C\u0430\u043F _7"
       rect:
         serializedVersion: 2
         x: 128
@@ -290,14 +298,15 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bff59cdf65daab478b4d8d050f28be7
-      internalID: 472481069
+      spriteID: d49bce2cb9beda244ada00857a3debd8
+      internalID: -718420047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roadTile_8
+      name: "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439
+        \u0442\u0430\u0439\u043B\u043C\u0430\u043F _8"
       rect:
         serializedVersion: 2
         x: 256
@@ -311,8 +320,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 999e8091fd2ec234a9313fbfca2183cd
-      internalID: -330204668
+      spriteID: fe49e1505ebb26b4f9800be9fecefc1c
+      internalID: 1107312562
       vertices: []
       indices: 
       edges: []
@@ -328,15 +337,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      roadTile_5: 1892079780
-      roadTile_0: -53975657
-      roadTile_8: -330204668
-      roadTile_3: -2075098792
-      roadTile_1: 1022405654
-      roadTile_2: -642665559
-      roadTile_6: -1964801382
-      roadTile_7: 472481069
-      roadTile_4: 1003043390
+      "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439 \u0442\u0430\u0439\u043B\u043C\u0430\u043F _8": 1107312562
+      "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439 \u0442\u0430\u0439\u043B\u043C\u0430\u043F _5": -174925112
+      "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439 \u0442\u0430\u0439\u043B\u043C\u0430\u043F _3": 1641922564
+      "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439 \u0442\u0430\u0439\u043B\u043C\u0430\u043F _6": -398677225
+      "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439 \u0442\u0430\u0439\u043B\u043C\u0430\u043F _4": 176833746
+      "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439 \u0442\u0430\u0439\u043B\u043C\u0430\u043F _2": -1451308875
+      "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439 \u0442\u0430\u0439\u043B\u043C\u0430\u043F _1": 858706803
+      "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439 \u0442\u0430\u0439\u043B\u043C\u0430\u043F _7": -718420047
+      "\u043F\u043E\u0442\u043E\u043B\u043E\u043A \u0441\u043E \u0441\u0442\u0435\u043D\u043E\u0439 \u0442\u0430\u0439\u043B\u043C\u0430\u043F _0": -1217992652
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
