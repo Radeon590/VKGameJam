@@ -4,27 +4,32 @@ using UnityEngine;
 public class TaskPoint : MonoBehaviour
 {
     [SerializeField] private GameObject OrderActionsPanel;
-    [SerializeField] private TaskController taskManager;
-    public ConsumerOnScene ConsumerInPoint;
+    [SerializeField] private TaskController taskController;
+    [HideInInspector] public ConsumerOnScene ConsumerInPoint;
 
-    public void AcceptOrder()
+    public void OrderAction()
     {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.name == "Player")
+        if(ConsumerInPoint != null)
         {
-            OrderActionsPanel.SetActive(true);
+            if (taskController.TaskMeals != null)
+            {
+                taskController.SubmitTask();
+            }
+            else
+            {
+                taskController.AcceptTask();
+            }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void EnterPointAction()
     {
-        if (collision.gameObject.name == "Player")
-        {
-            OrderActionsPanel.SetActive(false);
-        }
+        Debug.Log("enter action");
+        OrderActionsPanel.SetActive(true);
+    }
+
+    public void ExitPointAction()
+    {
+        OrderActionsPanel.SetActive(false);
     }
 }

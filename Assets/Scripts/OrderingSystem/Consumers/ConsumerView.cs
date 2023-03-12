@@ -11,7 +11,6 @@ public class ConsumerView : MonoBehaviour
 
     public void ShowConsumer(Consumer consumer)
     {
-        Debug.Log("show");
         var consumersQueue = GetComponent<ConsumerController>().ConsumersQueue;
         ConsumerOnScene newConsumer = Instantiate(consumerPref, consumersSpawnPoint.position, consumersSpawnPoint.rotation).GetComponent<ConsumerOnScene>();
         consumersQueue.Add(newConsumer);

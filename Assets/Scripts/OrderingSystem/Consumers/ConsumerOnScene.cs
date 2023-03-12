@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ConsumerOnScene : MonoBehaviour
+public class ConsumerOnScene : EmotionalPerson
 {
     [SerializeField] private float speed = 3;
     public UnityEvent OnConsumerInDestinationPoint;
@@ -18,6 +18,10 @@ public class ConsumerOnScene : MonoBehaviour
         {
             _consumer = value;
             GetComponent<SpriteRenderer>().sprite = value.Sprite;
+            if(_consumer.Wishes.Count == 0)
+            {
+                OnConsumerGaneOrder.Invoke();
+            }
         }
     }
 
@@ -43,8 +47,6 @@ public class ConsumerOnScene : MonoBehaviour
             {
                 OnConsumerInDestinationPoint.Invoke();
                 _move = false;
-                //
-                OnConsumerGaneOrder.Invoke();
             }
         }
     }
