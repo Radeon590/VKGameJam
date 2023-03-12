@@ -7,8 +7,6 @@ public class GameMaschine : MonoBehaviour
 {
     [SerializeField] private GameObject closeTabButton;
     [SerializeField] private MainTab mainTab;
-    [SerializeField] private ControlsManager controlsManager;
-    [SerializeField] private MovementController movementController;
 
     public UnityEvent OnShiftStarted;
     public UnityEvent OnShiftEnded;
@@ -23,7 +21,6 @@ public class GameMaschine : MonoBehaviour
     private void Start()
     {
         InitializaeGame();
-        
     }
 
     private void Update()
@@ -53,15 +50,14 @@ public class GameMaschine : MonoBehaviour
     {
         s_shiftTimer = 300;
         _isShiftInProgress = true;
-        mainTab.CloseTab();
         closeTabButton.SetActive(false);
-        movementController.Activate();
         OnShiftStarted?.Invoke();
     }
 
     public void EndShift()
     {
         _isShiftInProgress = false;
+        closeTabButton.SetActive(true);
         OnShiftEnded?.Invoke();
     }
 }

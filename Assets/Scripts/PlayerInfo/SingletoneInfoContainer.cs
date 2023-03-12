@@ -17,7 +17,7 @@ public class SingletoneInfoContainer : MonoBehaviour, IinfoContainer
 
     public static MoneyInfo MoneyInfo;
 
-    public static RatingInfo RatingInfo;
+    public static CafeInfo CafeInfo;
 
     public void LoadInfo()
     {
@@ -25,8 +25,8 @@ public class SingletoneInfoContainer : MonoBehaviour, IinfoContainer
         Storage.LoadInfo();
         MoneyInfo = new MoneyInfo();
         MoneyInfo.LoadInfo();
-        RatingInfo = new RatingInfo();
-        RatingInfo.LoadInfo();
+        CafeInfo = new CafeInfo();
+        CafeInfo.LoadInfo();
         s_mealComponents = mealComponents;
     }
 }

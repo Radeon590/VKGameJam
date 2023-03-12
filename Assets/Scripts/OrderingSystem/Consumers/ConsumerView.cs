@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class ConsumerView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject consumerPref;
+    [SerializeField] private Transform consumersSpawnPoint;
+    [SerializeField] private TaskPoint taskPoint;
+    [SerializeField] private float queueDistance = 5;
+
+    public void ShowConsumer(Consumer consumer)
     {
-        
+        var consumersQueue = GetComponent<ConsumerController>().ConsumersQueue;
+        ConsumerOnScene newConsumer = Instantiate(consumerPref, consumersSpawnPoint.position, consumersSpawnPoint.rotation).GetComponent<ConsumerOnScene>();
+        consumersQueue.Add(newConsumer);
+        newConsumer.Consumer = consumer;
+        newConsumer.DestinationPoint = new Vector2(taskPoint.transform.position.x + queueDistance * (consumersQueue.Count - 1), taskPoint.transform.position.y);
+        if(consumersQueue.Count == 1)
+        {
+            newConsumer.OnConsumerInDestinationPoint.AddListener(AssignTask);
+            newConsumer.OnConsumerGaneOrder.AddListener(SubmitTask);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AssignTask()
     {
-        
+        taskPoint.ConsumerInPoint = GetComponent<ConsumerController>().ConsumersQueue[0];
+    }
+
+    public void SubmitTask()
+    {
+        var consumersQueue = GetComponent<ConsumerController>().ConsumersQueue;
+        for(int i = 0; i < consumersQueue.Count; i++)
+        {
+            
+        }
     }
 }

@@ -5,7 +5,7 @@ public class TaskPoint : MonoBehaviour
 {
     [SerializeField] private GameObject OrderActionsPanel;
     [SerializeField] private TaskController taskManager;
-    public List<Meal> TaskMeals;
+    public ConsumerOnScene ConsumerInPoint;
 
     public void AcceptOrder()
     {

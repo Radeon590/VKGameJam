@@ -6,6 +6,16 @@ using UnityEngine;
 public class Consumer : ScriptableObject
 {
     public Sprite Sprite;
-    public int Appetite = 1;
+    public (int, int) AppetiteRange = (1, 2);
     public List<Meal> Wishes;
+
+    public Consumer()
+    {
+
+    }
+
+    public Consumer(List<Meal> Wishes)
+    {
+        this.Wishes = Wishes;
+    }
 }

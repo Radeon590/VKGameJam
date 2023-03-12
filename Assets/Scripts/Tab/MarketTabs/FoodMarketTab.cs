@@ -40,7 +40,9 @@ public class FoodMarketTab : Tab
 
     public void RemoveItemForPurchasing(Item item)
     {
-        if (_itemsForPurchasinng.Contains(item))
+        if (new ListsHelper<Item>().ClearLists(_itemsForPurchasinng, _numbersOfItemsForPurchasing, item as MealComponent, 1))
+            CurrentPrice -= item.Price;
+        /*if (_itemsForPurchasinng.Contains(item))
         {
             int index = _itemsForPurchasinng.IndexOf(item);
             if (_numbersOfItemsForPurchasing[index] > 1)
@@ -53,7 +55,7 @@ public class FoodMarketTab : Tab
                 _itemsForPurchasinng.RemoveAt(index);
             }
             CurrentPrice -= item.Price;
-        }
+        }*/
     }
 
     public override void OpenTab()
