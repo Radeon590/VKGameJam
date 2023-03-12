@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0271abab062a44eadd7878f2629444, type: 3}
   m_Name: pelmen_chicken 1
   m_EditorClassIdentifier: 
-  Namespace: hinkali
+  Namespace: pelmen_chicken
   Sprite: {fileID: 0}
-  Icon: {fileID: 21300000, guid: a16d61bde32bfac4e8466fb13c308885, type: 3}
+  Icon: {fileID: 21300000, guid: 81431d0eab47b5149b22146395c72fd2, type: 3}
   Price: 100
   MaxNumber: 100
   MealComponents:

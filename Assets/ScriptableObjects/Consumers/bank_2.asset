@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fed2f0ea230b68429a5f34e369df0b8, type: 3}
+  m_Name: bank_2
+  m_EditorClassIdentifier: 
+  Sprite: {fileID: 21300000, guid: 7cd8e97c6a5f04b48985ccee2862ba89, type: 3}
+  Wishes:
+  - {fileID: 11400000, guid: 4a564260df961ee429af28402722f4f6, type: 2}
+  - {fileID: 11400000, guid: 69af2ebbebfad1a47859b73b4e61f57d, type: 2}
+  - {fileID: 11400000, guid: 5163d4b5b3dd0d44e9fe2b3ffe20bf75, type: 2}
+  - {fileID: 11400000, guid: 5dc3470733a83bc46910a50c8ee25ea3, type: 2}
+  - {fileID: 11400000, guid: 509e8d1dd2f6a05418c0c2f29e090de1, type: 2}
+  - {fileID: 11400000, guid: 001a89e83ae21744f97d13bb1e8cfd32, type: 2}
+  - {fileID: 11400000, guid: 7403bbe34bfcce54b9523b5192905f73, type: 2}
+  - {fileID: 11400000, guid: b9581463e01cab44688e0d934b39f3ae, type: 2}
+  - {fileID: 11400000, guid: e0c9e93084efb8f42bcc19c9f25548e1, type: 2}
+  - {fileID: 11400000, guid: 2f64c73759192d346822cde4f7be0c46, type: 2}
+  - {fileID: 11400000, guid: 29e5ff49bcb3c3e49bb86e66fd120ae2, type: 2}
+  - {fileID: 11400000, guid: 99baa6b948cdabc45ae7ab686a30a465, type: 2}
