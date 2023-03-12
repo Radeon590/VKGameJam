@@ -31,9 +31,13 @@ public class ConsumerView : MonoBehaviour
     public void SubmitTask()
     {
         var consumersQueue = GetComponent<ConsumerController>().ConsumersQueue;
-        for(int i = 0; i < consumersQueue.Count; i++)
+        consumersQueue[0].DestinationPoint = consumersSpawnPoint.position;
+        consumersQueue.RemoveAt(0);
+        consumersQueue[0].OnConsumerInDestinationPoint.AddListener(AssignTask);
+        consumersQueue[0].OnConsumerGaneOrder.AddListener(SubmitTask);
+        for (int i = 0; i < consumersQueue.Count; i++)
         {
-            
+            consumersQueue[i].DestinationPoint = new Vector2(taskPoint.transform.position.x + queueDistance * (consumersQueue.Count - 1), taskPoint.transform.position.y);
         }
     }
 }
