@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8a5ada3de823b242b0379b65609da8b, type: 3}
-  m_Name: meat_pork
+  m_Name: beef
   m_EditorClassIdentifier: 
-  Namespace: meat_pork
-  Sprite: {fileID: 21300000, guid: 22d1fc1001367b743ab991285aa4ece8, type: 3}
-  Icon: {fileID: 21300000, guid: ceaa36e5efee8894fa7ce024169ba9c6, type: 3}
+  Namespace: 
+  Sprite: {fileID: 21300000, guid: 9a12621f46358db4c90f82b4cd4a593e, type: 3}
+  Icon: {fileID: 0}
   Price: 10
   MaxNumber: 10

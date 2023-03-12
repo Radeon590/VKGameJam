@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: meat_beef
   m_EditorClassIdentifier: 
   Namespace: meat_beaf
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: d97ffb083ff8ef043a5ce5426189d46f, type: 3}
   Icon: {fileID: 21300000, guid: 9a12621f46358db4c90f82b4cd4a593e, type: 3}
   Price: 10
   MaxNumber: 10

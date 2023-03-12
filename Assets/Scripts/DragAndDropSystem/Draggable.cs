@@ -19,7 +19,7 @@ public class Draggable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Draggable collidedDraggable = other.GetComponent<Draggable>();
+        var collidedDraggable = other.gameObject.GetComponent<Draggable>();
 
         if (collidedDraggable != null && _dragController.LastDragged.gameObject == gameObject)
         {

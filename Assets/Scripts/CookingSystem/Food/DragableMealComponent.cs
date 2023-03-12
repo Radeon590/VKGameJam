@@ -10,6 +10,26 @@ public class DragableMealComponent : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = Comp.Sprite;
+        NullSprite();
+    }
+
+    public void NullSprite()
+    {
+        ChangeSprite(null);
+    }
+
+    public void DragSprite()
+    {
+        ChangeSprite(Comp.Icon);
+    }
+
+    public void BoardSprite()
+    {
+        ChangeSprite(Comp.Sprite);
+    }
+
+    private void ChangeSprite(Sprite s)
+    {
+        GetComponent<SpriteRenderer>().sprite = s;
     }
 }

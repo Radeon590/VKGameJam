@@ -18,6 +18,7 @@ public class DropValidItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log(Time.time);
         Triggered = true;
         Draggable collidedDraggable = other.GetComponent<Draggable>();
 

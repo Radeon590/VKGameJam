@@ -84,10 +84,16 @@ public class DragController : MonoBehaviour
                 break;
             }
         }
+        var meal = _lastDragged.gameObject.GetComponent<DragableMealComponent>();
 
         if (triggered == false)
         {
+            if (meal != null) meal.NullSprite();
             _lastDragged.gameObject.transform.position = _lastDragged._spawnpos;
+        }
+        else
+        {
+            if (meal != null) meal.BoardSprite();
         }
     }
     
@@ -99,6 +105,11 @@ public class DragController : MonoBehaviour
     private void InitDrag()
     {
         UpdateDragStatus(true);
+        var meal = _lastDragged.gameObject.GetComponent<DragableMealComponent>();
+        if (meal != null)
+        {
+            meal.DragSprite();
+        }
     }
 
     void UpdateDragStatus(bool isDragging)
