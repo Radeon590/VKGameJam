@@ -21,12 +21,12 @@ public class SingletoneInfoContainer : MonoBehaviour, IinfoContainer
 
     public void LoadInfo()
     {
+        s_mealComponents = mealComponents;
         Storage = new StorageInfo();
         Storage.LoadInfo();
         MoneyInfo = new MoneyInfo();
         MoneyInfo.LoadInfo();
         CafeInfo = new CafeInfo();
         CafeInfo.LoadInfo();
-        s_mealComponents = mealComponents;
     }
 }

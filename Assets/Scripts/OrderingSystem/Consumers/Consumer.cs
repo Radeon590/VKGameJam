@@ -6,7 +6,7 @@ using UnityEngine;
 public class Consumer : ScriptableObject
 {
     public Sprite Sprite;
-    public (int, int) AppetiteRange = (1, 2);
+    public int AppetiteRange = 1;
     public List<Meal> Wishes;
 
     public Consumer()

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: peach_grey
   m_EditorClassIdentifier: 
   Sprite: {fileID: 21300000, guid: 18d50885ff9ada1429e8935dd0b7f489, type: 3}
+  AppetiteRange: 3
   Wishes:
   - {fileID: 11400000, guid: 4a564260df961ee429af28402722f4f6, type: 2}
   - {fileID: 11400000, guid: 69af2ebbebfad1a47859b73b4e61f57d, type: 2}

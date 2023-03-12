@@ -25,7 +25,7 @@ public class ConsumerController : MonoBehaviour
     private void Update()
     {
         _nextConsumerTimer -= Time.deltaTime;
-        if(_nextConsumerTimer < 0 && _consumersQueue.Count < SingletoneInfoContainer.CafeInfo.ConsumersRating)
+        if(_nextConsumerTimer < 0 && _consumersQueue.Count < SingletoneInfoContainer.CafeInfo.Capacity)
         {
             GenerateConsumer();
         }
@@ -57,7 +57,7 @@ public class ConsumerController : MonoBehaviour
             Consumer consumer = consumersForCheck[Random.Range(0, consumersForCheck.Count - 1)];
             List<Meal> mealsForCheck = new List<Meal>(consumer.Wishes);
             List<MealComponent> removedComponents = new List<MealComponent>();
-            int appetite = Random.Range(consumer.AppetiteRange.Item1, consumer.AppetiteRange.Item2);
+            int appetite = Random.Range(0, consumer.AppetiteRange);
             bool isCanCook = false;
             while (appetite > 0)
             {
@@ -95,6 +95,6 @@ public class ConsumerController : MonoBehaviour
 
     private void RandomiseNextConsumerTime()
     {
-        _nextConsumerTimer = 10 / SingletoneInfoContainer.CafeInfo.ConsumersRating;
+        _nextConsumerTimer = Random.Range(1, 5 / SingletoneInfoContainer.CafeInfo.ConsumersRating);
     }
 }

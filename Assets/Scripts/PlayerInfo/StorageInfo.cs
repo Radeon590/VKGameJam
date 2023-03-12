@@ -26,5 +26,12 @@ public struct StorageInfo: IinfoContainer
     public void LoadInfo()
     {
         ComponentsInStorage = new List<MealComponent>();
+        ComponentsInStorageNumbers = new List<int>();
+        //testing
+        ComponentsInStorage = SingletoneInfoContainer.MealComponents;
+        for(int i = 0; i < ComponentsInStorage.Count; i++)
+        {
+            ComponentsInStorageNumbers.Add(100);
+        }
     }
 }
