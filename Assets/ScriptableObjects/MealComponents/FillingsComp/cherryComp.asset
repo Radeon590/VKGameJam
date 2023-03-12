@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cherryComp
   m_EditorClassIdentifier: 
   Namespace: 
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 52f4e3036a8e2df42b3f69f2de67211d, type: 3}
   Icon: {fileID: 21300000, guid: 825dfbc03a3fd9d43bef077179de7db0, type: 3}
   Price: 10
   MaxNumber: 10

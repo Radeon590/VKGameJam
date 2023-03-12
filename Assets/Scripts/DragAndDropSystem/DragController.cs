@@ -80,6 +80,7 @@ public class DragController : MonoBehaviour
         {
             if (i.Triggered)
             {
+                i.Triggered = false;
                 triggered = true;
                 break;
             }
@@ -109,6 +110,11 @@ public class DragController : MonoBehaviour
         if (meal != null)
         {
             meal.DragSprite();
+        }
+
+        foreach (var i in _dvitems)
+        {
+            i.Deattach(_lastDragged.gameObject);
         }
     }
 

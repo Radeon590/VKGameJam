@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: potato
   m_EditorClassIdentifier: 
   Namespace: potato
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: 677ce8f76d1fd9247a2373a35ca4ae45, type: 3}
   Icon: {fileID: 21300000, guid: 142a7d30216724245b2ecebee0e53af7, type: 3}
   Price: 10
   MaxNumber: 10

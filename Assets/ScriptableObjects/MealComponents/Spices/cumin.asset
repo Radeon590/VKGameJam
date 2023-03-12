@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cumin
   m_EditorClassIdentifier: 
   Namespace: cumin
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: e0418e0b1f95504448857f6595e52426, type: 3}
   Icon: {fileID: 21300000, guid: 25849c27e17ff1943a3a31e67468e6a3, type: 3}
   Price: 10
   MaxNumber: 10

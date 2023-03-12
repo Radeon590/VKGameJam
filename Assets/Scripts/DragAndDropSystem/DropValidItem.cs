@@ -8,7 +8,7 @@ public class DropValidItem : MonoBehaviour
     private Collider2D _collider;
     public bool Triggered = false;
     private DragController _dragController;
-    public List<GameObject> AtachedItems;
+    public List<GameObject> AttachedItems;
 
     private void Start()
     {
@@ -16,26 +16,19 @@ public class DropValidItem : MonoBehaviour
         _dragController = FindObjectOfType<DragController>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void Attach(GameObject g)
     {
-        Debug.Log(Time.time);
-        Triggered = true;
-        Draggable collidedDraggable = other.GetComponent<Draggable>();
+        AttachedItems.Add(g);
+    }
 
-        if (collidedDraggable != null)
+    public void Deattach(GameObject g)
+    {
+        for(int i = 0; i < AttachedItems.Count; ++i)
         {
-            _attach(_dragController.LastDragged.gameObject);
-            _dragController.LastDragged.gameObject.transform.position = gameObject.transform.position;
+            if (g.name == AttachedItems[i].name)
+            {
+                AttachedItems.RemoveAt(i);
+            }
         }
-    }
-
-    public void OnTriggerExit2D(Collider2D other)
-    {
-        Triggered = false;
-    }
-
-    private void _attach(GameObject g)
-    {
-        AtachedItems.Add(g);
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: tofu
   m_EditorClassIdentifier: 
   Namespace: tofu
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: bd38ded68a648184889d42e9e764a895, type: 3}
   Icon: {fileID: 21300000, guid: a6e4d8199e03c2a468b3da82de3094ed, type: 3}
   Price: 10
   MaxNumber: 10
