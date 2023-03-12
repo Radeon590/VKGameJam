@@ -12,7 +12,7 @@ public class ConsumerView : MonoBehaviour
     public void ShowConsumer(Consumer consumer)
     {
         var consumersQueue = GetComponent<ConsumerController>().ConsumersQueue;
-        ConsumerOnScene newConsumer = Instantiate(consumerPref, consumersSpawnPoint.position, consumersSpawnPoint.rotation).GetComponent<ConsumerOnScene>();
+        ConsumerOnScene newConsumer = Instantiate(consumerPref, consumersSpawnPoint.position, consumersSpawnPoint.rotation, consumersSpawnPoint).GetComponent<ConsumerOnScene>();
         consumersQueue.Add(newConsumer);
         newConsumer.Consumer = consumer;
         newConsumer.DestinationPoint = new Vector2(taskPoint.transform.position.x + queueDistance * (consumersQueue.Count - 1), taskPoint.transform.position.y);
