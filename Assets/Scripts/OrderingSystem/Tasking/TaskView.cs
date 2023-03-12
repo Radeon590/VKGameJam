@@ -6,6 +6,7 @@ public class TaskView : MonoBehaviour
 {
     [SerializeField] private Transform littleRecipeGroup;
     [SerializeField] private Transform bigRecipeGroup;
+    [SerializeField] private GameObject linePref;
     
 
     private List<Meal> _orderList = new List<Meal>();
@@ -21,11 +22,13 @@ public class TaskView : MonoBehaviour
 
     public void ShowLittleRecipe()
     {
-
+        littleRecipeGroup.gameObject.SetActive(true);
+        bigRecipeGroup.gameObject.SetActive(false);
     }
 
     public void ShowFullRecipe()
     {
-
+        littleRecipeGroup.gameObject.SetActive(false);
+        bigRecipeGroup.gameObject.SetActive(true);
     }
 }

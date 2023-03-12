@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class GameMaschine : MonoBehaviour
 {
+    [SerializeField] private CarsSpawner carsSpawner;
     [SerializeField] private GameObject closeTabButton;
     [SerializeField] private MainTab mainTab;
 
@@ -21,7 +22,8 @@ public class GameMaschine : MonoBehaviour
     private void Start()
     {
         InitializaeGame();
-        StartShift();
+        StartPreparing();
+        //StartShift();
     }
 
     private void Update()
@@ -39,6 +41,7 @@ public class GameMaschine : MonoBehaviour
     public void InitializaeGame()
     {
         GetComponent<SingletoneInfoContainer>().LoadInfo();
+        carsSpawner.StartSpawning();
     }
 
     public void StartPreparing()

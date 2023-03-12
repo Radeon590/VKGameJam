@@ -19,9 +19,13 @@ public class Inventory : MonoBehaviour
             if (_itemInHand != null)
             {
                 itemInHandIcon.sprite = _itemInHand.Icon;
+                itemInHandIcon.color = Color.white;
             }
             else
+            {
                 itemInHandIcon.sprite = null;
+                itemInHandIcon.color = new Color(0, 0, 0, 0);
+            }
         }
     }
 
