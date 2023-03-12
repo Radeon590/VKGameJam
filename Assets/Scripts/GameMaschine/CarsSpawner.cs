@@ -22,7 +22,7 @@ public class CarsSpawner : MonoBehaviour
             {
                 _carNumber = 0;
             }
-            Instantiate(car, spawnPoint.position, spawnPoint.rotation).GetComponent<Car>().SpriteNumber = _carNumber;
+            Instantiate(car, spawnPoint.position, spawnPoint.rotation, spawnPoint).GetComponent<Car>().SpriteNumber = _carNumber;
             yield return new WaitForSeconds(10);
             _carNumber++;
         }
