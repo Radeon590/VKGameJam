@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class DropValidItem : MonoBehaviour
 {
     private Collider2D _collider;
+    public bool Triggered = false;
     private DragController _dragController;
     public List<GameObject> AtachedItems;
 
@@ -16,14 +18,19 @@ public class DropValidItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Triggered = true;
         Draggable collidedDraggable = other.GetComponent<Draggable>();
 
         if (collidedDraggable != null)
         {
-            Debug.Log(1);
             _attach(_dragController.LastDragged.gameObject);
             _dragController.LastDragged.gameObject.transform.position = gameObject.transform.position;
         }
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        Triggered = false;
     }
 
     private void _attach(GameObject g)

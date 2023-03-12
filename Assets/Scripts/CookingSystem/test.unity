@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragging: 0
+  _spawnpos: {x: 0, y: 0}
 --- !u!212 &1105233740
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -367,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe7f5b1c3de9944baeddd3877211fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Comp: {fileID: 0}
+  Comp: {fileID: 11400000, guid: c177ef489ac34ee48b594261330dac98, type: 2}
 --- !u!1 &1120036364
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1a30e76b87a034dbedcdcf3c4688a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Triggered: 0
   AtachedItems: []
 --- !u!61 &1120036366
 BoxCollider2D:
@@ -596,6 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragging: 0
+  _spawnpos: {x: 0, y: 0}
 --- !u!212 &1979268105
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -675,7 +678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe7f5b1c3de9944baeddd3877211fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Comp: {fileID: 0}
+  Comp: {fileID: 11400000, guid: 0f39cd7c1c556744fadd2ddfaa7f9315, type: 2}
 --- !u!1 &1995581529
 GameObject:
   m_ObjectHideFlags: 0

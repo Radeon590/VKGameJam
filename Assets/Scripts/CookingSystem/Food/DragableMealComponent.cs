@@ -9,6 +9,6 @@ public class DragableMealComponent : MonoBehaviour
 
     private void Start()
     {
-        
+        GetComponent<SpriteRenderer>().sprite = Comp.Sprite;
     }
 }

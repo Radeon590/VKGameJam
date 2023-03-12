@@ -10,9 +10,21 @@ public class DragController : MonoBehaviour
     private Vector2 _screenPosition;
     private Vector3 _worldPosition;
     private Draggable _lastDragged;
+    private DropValidItem[] _dvitems;
+    private bool _dropped = false;
+    
+    private void Start()
+    {
+        _dvitems = FindObjectsByType<DropValidItem>(FindObjectsSortMode.None);
+    }
 
     void Update()
     {
+        if (_dropped)
+        {
+            _dropped = false;
+            ManualTeleport();
+        }
         if (_isDragActive && (Input.GetMouseButtonUp(0) ||
                               (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended)))
         {
@@ -58,8 +70,27 @@ public class DragController : MonoBehaviour
     private void Drop()
     {
         UpdateDragStatus(false);
-        
+        _dropped = true;
     }
+
+    private void ManualTeleport()
+    {
+        bool triggered = false;
+        foreach (var i in _dvitems)
+        {
+            if (i.Triggered)
+            {
+                triggered = true;
+                break;
+            }
+        }
+
+        if (triggered == false)
+        {
+            _lastDragged.gameObject.transform.position = _lastDragged._spawnpos;
+        }
+    }
+    
     private void Drag()
     {
         _lastDragged.transform.position = new Vector2(_worldPosition.x, _worldPosition.y);
@@ -74,5 +105,6 @@ public class DragController : MonoBehaviour
     {
         _isDragActive = _lastDragged.IsDragging = isDragging;
         _lastDragged.gameObject.layer = isDragging ? Layer.Dragging : Layer.Default;
+        
     }
 }
