@@ -7,7 +7,7 @@ public class ConsumerView : MonoBehaviour
     [SerializeField] private GameObject consumerPref;
     [SerializeField] private Transform consumersSpawnPoint;
     [SerializeField] private TaskPoint taskPoint;
-    [SerializeField] private float queueDistance = 5;
+    private float queueDistance = 2.5f;
 
     public void ShowConsumer(Consumer consumer)
     {
@@ -31,13 +31,19 @@ public class ConsumerView : MonoBehaviour
     public void SubmitTask()
     {
         var consumersQueue = GetComponent<ConsumerController>().ConsumersQueue;
+        consumersQueue[0].OnConsumerGaneOrder.RemoveAllListeners();
+        consumersQueue[0].OnConsumerInDestinationPoint.RemoveAllListeners();
+        consumersQueue[0].OnConsumerInDestinationPoint.AddListener(consumersQueue[0].DestroyObject);
         consumersQueue[0].DestinationPoint = consumersSpawnPoint.position;
         consumersQueue.RemoveAt(0);
-        consumersQueue[0].OnConsumerInDestinationPoint.AddListener(AssignTask);
-        consumersQueue[0].OnConsumerGaneOrder.AddListener(SubmitTask);
-        for (int i = 0; i < consumersQueue.Count; i++)
+        if(consumersQueue.Count > 0)
         {
-            consumersQueue[i].DestinationPoint = new Vector2(taskPoint.transform.position.x + queueDistance * (consumersQueue.Count - 1), taskPoint.transform.position.y);
+            consumersQueue[0].OnConsumerInDestinationPoint.AddListener(AssignTask);
+            consumersQueue[0].OnConsumerGaneOrder.AddListener(SubmitTask);
+            for (int i = 0; i < consumersQueue.Count; i++)
+            {
+                consumersQueue[i].DestinationPoint = new Vector2(taskPoint.transform.position.x + queueDistance * (consumersQueue.Count - 1), taskPoint.transform.position.y);
+            }
         }
     }
 }

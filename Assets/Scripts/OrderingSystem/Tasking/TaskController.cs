@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
+[RequireComponent(typeof(TaskView), typeof(Inventory))]
 public class TaskController : MonoBehaviour
 {
-    public List<Meal> _taskMeals;
+    [SerializeField] private TaskView taskView;
+    [SerializeField] private TaskPoint taskPoint;
+
+    private List<Meal> _taskMeals;
 
     public List<Meal> TaskMeals
     {
@@ -15,35 +20,45 @@ public class TaskController : MonoBehaviour
         }
     }
 
+    public void AcceptTask()
+    {
+        _taskMeals = taskPoint.ConsumerInPoint.Consumer.Wishes;
+    }
+
     public void SubmitTask()
     {
         Inventory inventory = GetComponent<Inventory>();
         if (inventory.ItemInHand != null && inventory.ItemInHand is Meal)
         {
-            if (IsItRequiredMeal(inventory.ItemInHand as Meal))
+            if (IsOrderContainsMeal(inventory.ItemInHand as Meal))
             {
-                
+                _taskMeals.Remove(inventory.ItemInHand as Meal);
+                taskPoint.ConsumerInPoint.ShowEmoje(EmojiTypes.Glad);
             }
             else
+            {
                 ShowErrorScreen();
+            }
             inventory.ItemInHand = null;
             return;
         }
         ShowErrorScreen();
     }
 
-    private bool IsItRequiredMeal(Meal mealToCheck)
+    private bool IsOrderContainsMeal(Meal meal)
     {
-        foreach (var meal in TaskMeals)
+        foreach(var mealToCompare in _taskMeals)
         {
-            if (mealToCheck == meal)
+            if (mealToCompare.Equals(meal))
+            {
                 return true;
+            }
         }
         return false;
     }
 
     private void ShowErrorScreen()
     {
-
+        taskPoint.ConsumerInPoint.ShowEmoje(EmojiTypes.Upset);
     }
 }

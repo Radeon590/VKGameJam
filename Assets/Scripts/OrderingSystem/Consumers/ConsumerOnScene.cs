@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ConsumerOnScene : MonoBehaviour
+public class ConsumerOnScene : EmotionalPerson
 {
-    [SerializeField] private float speed = 10;
+    [SerializeField] private float speed = 3;
     public UnityEvent OnConsumerInDestinationPoint;
     public UnityEvent OnConsumerGaneOrder;
 
@@ -18,6 +18,10 @@ public class ConsumerOnScene : MonoBehaviour
         {
             _consumer = value;
             GetComponent<SpriteRenderer>().sprite = value.Sprite;
+            if(_consumer.Wishes.Count == 0)
+            {
+                OnConsumerGaneOrder.Invoke();
+            }
         }
     }
 
@@ -28,6 +32,7 @@ public class ConsumerOnScene : MonoBehaviour
         set
         {
             _destinationPoint = value;
+            _move = true;
         }
     }
 
@@ -38,12 +43,16 @@ public class ConsumerOnScene : MonoBehaviour
         if (_move)
         {
             transform.position = Vector2.MoveTowards(transform.position, _destinationPoint, speed * Time.deltaTime);
-            if(Vector2.Distance(transform.position, _destinationPoint) < 2)
+            if(Vector2.Distance(transform.position, _destinationPoint) < 0.5f)
             {
                 OnConsumerInDestinationPoint.Invoke();
                 _move = false;
             }
         }
-        
+    }
+
+    public void DestroyObject()
+    {
+        Destroy(gameObject);
     }
 }

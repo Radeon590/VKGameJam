@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e0271abab062a44eadd7878f2629444, type: 3}
-  m_Name: NewMeal
+  m_Name: varenik_cheese
   m_EditorClassIdentifier: 
   Namespace: varenik-Cheese
   Sprite: {fileID: 0}

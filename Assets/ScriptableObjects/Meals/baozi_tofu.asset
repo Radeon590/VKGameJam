@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0271abab062a44eadd7878f2629444, type: 3}
   m_Name: baozi_tofu
   m_EditorClassIdentifier: 
-  Namespace: baozi
+  Namespace: baozi_tofu
   Sprite: {fileID: 0}
   Icon: {fileID: 21300000, guid: 7a7d6be87d53b054b9b1c6d70966ade8, type: 3}
   Price: 100

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0271abab062a44eadd7878f2629444, type: 3}
   m_Name: raviolo_fish
   m_EditorClassIdentifier: 
-  Namespace: hinkali
+  Namespace: ravioli_fish
   Sprite: {fileID: 0}
-  Icon: {fileID: 21300000, guid: a16d61bde32bfac4e8466fb13c308885, type: 3}
+  Icon: {fileID: 21300000, guid: ad5311b2629438146bad9ad09ad209b7, type: 3}
   Price: 100
   MaxNumber: 100
   MealComponents:

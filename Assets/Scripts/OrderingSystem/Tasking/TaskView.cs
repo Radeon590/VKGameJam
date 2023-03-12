@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class TaskView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Transform littleRecipeGroup;
+    [SerializeField] private Transform bigRecipeGroup;
+    
+
+    private List<Meal> _orderList = new List<Meal>();
+
+    public List<Meal> OrderList
     {
-        
+        set 
+        { 
+            _orderList = value; 
+            ShowLittleRecipe();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowLittleRecipe()
     {
-        
+
+    }
+
+    public void ShowFullRecipe()
+    {
+
     }
 }
