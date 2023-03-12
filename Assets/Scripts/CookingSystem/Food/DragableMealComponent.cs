@@ -6,6 +6,7 @@ using UnityEngine;
 public class DragableMealComponent : MonoBehaviour
 {
     public MealComponent Comp;
+    public MealComponent CompOnBoard;
 
     private void Start()
     {
