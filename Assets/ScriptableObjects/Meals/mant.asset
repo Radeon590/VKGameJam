@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0271abab062a44eadd7878f2629444, type: 3}
+  m_Name: mant
+  m_EditorClassIdentifier: 
+  Namespace: mant_pumpkin
+  Sprite: {fileID: 0}
+  Icon: {fileID: 21300000, guid: dc152c71ea8fb244c9fd80fb3aac3b3b, type: 3}
+  Price: 100
+  MaxNumber: 100
+  MealComponents:
+  - {fileID: 11400000, guid: e8d7bd75f7d161640b7a16e16071d399, type: 2}
+  - {fileID: 11400000, guid: 975864c6ef5a24c4690b38b8177a42ff, type: 2}
+  - {fileID: 11400000, guid: 7bc8d5fbae6a070488e174c2b03e46ed, type: 2}
