@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Serialization;
 using UnityEngine;
 
 [RequireComponent(typeof(TaskView), typeof(Inventory))]
@@ -22,7 +21,10 @@ public class TaskController : MonoBehaviour
 
     public void AcceptTask()
     {
+        Debug.Log("task accepting");
         _taskMeals = taskPoint.ConsumerInPoint.Consumer.Wishes;
+        Debug.Log("set order list");
+        taskView.OrderList = _taskMeals;
     }
 
     public void SubmitTask()

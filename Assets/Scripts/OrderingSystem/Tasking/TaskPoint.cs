@@ -17,6 +17,7 @@ public class TaskPoint : MonoBehaviour
             }
             else
             {
+                Debug.Log("accept task");
                 taskController.AcceptTask();
             }
         }
@@ -24,7 +25,6 @@ public class TaskPoint : MonoBehaviour
 
     public void EnterPointAction()
     {
-        Debug.Log("enter action");
         OrderActionsPanel.SetActive(true);
     }
 
